@@ -1,0 +1,36 @@
+---
+output: github_document
+---
+
+```{r setup, include = FALSE}
+should_eval <- "tibble" %in% installed.packages()
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# readmission
+
+readmission is an R data package containing a data frame, `readmission`, giving hospital readmission data for patients with diabetes. Clinical care data is from 130 U.S. hospitals in years 1999-2008. Each row describes a patient "encounter" with variables on demographics, medications, patient history, diagnostics, payment, and readmission.
+
+## Installation
+
+You can install the development version of readmission from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("simonpcouch/readmission")
+```
+
+## Example
+
+```{r, eval = should_eval}
+library(tibble)
+library(readmission)
+
+readmission
+```
