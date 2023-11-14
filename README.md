@@ -26,7 +26,7 @@ library(readmission)
 readmission
 #> # A tibble: 71,515 × 12
 #>    readmitted race           sex   age   admission_source a1c   insurer duration
-#>    <fct>      <fct>          <fct> <ord> <fct>            <fct> <fct>      <dbl>
+#>    <fct>      <fct>          <fct> <fct> <fct>            <fct> <fct>      <dbl>
 #>  1 Yes        African Ameri… Male  [60-… Referral         <NA>  <NA>           7
 #>  2 No         Caucasian      Fema… [50-… Emergency        Norm… Private        4
 #>  3 Yes        Caucasian      Fema… [70-… Referral         <NA>  Medica…        5
