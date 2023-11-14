@@ -42,20 +42,20 @@
 #' }
 #'
 #' @source
-#' _Original source data from the following paper:_
+#' _Original source data from the following paper (CC BY 3.0):_
 #'
 #' Strack, B., DeShazo, J. P., Gennings, C., Olmo, J. L., Ventura, S., Cios,
 #' K. J., & Clore, J. N. 2014. Impact of HbA1c measurement on hospital
 #' readmission rates: analysis of 70,000 clinical database patient records.
 #' BioMed research international, 781670. <doi:10.1155/2014/781670>.
 #'
-#' _Shared freely through the UCI Machine Learning Repository:_
+#' _Shared freely through the UCI Machine Learning Repository (CC BY 4.0):_
 #'
 #' Clore, J., Cios, K., DeShazo, J. P., and Strack, B. 2014. Diabetes 130-US
 #' hospitals for years 1999-2008. UCI Machine Learning Repository.
 #' <doi:10.24432/C5230J>.
 #'
-#' _Downloaded from resources shared by the Fairlearn team:_
+#' _Downloaded from resources shared by the Fairlearn team (MIT):_
 #'
 #' Weerts, H., Dudík M., Edgar, R., Jalali, A., Lutz, R., & Madaio, M. 2023.
 #' Fairlearn: Assessing and Improving Fairness of AI Systems. Journal of

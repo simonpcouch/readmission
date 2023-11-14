@@ -41,20 +41,20 @@ during the encounter.}
 }
 }
 \source{
-\emph{Original source data from the following paper:}
+\emph{Original source data from the following paper (CC BY 3.0):}
 
 Strack, B., DeShazo, J. P., Gennings, C., Olmo, J. L., Ventura, S., Cios,
 K. J., & Clore, J. N. 2014. Impact of HbA1c measurement on hospital
 readmission rates: analysis of 70,000 clinical database patient records.
 BioMed research international, 781670. \url{doi:10.1155/2014/781670}.
 
-\emph{Shared freely through the UCI Machine Learning Repository:}
+\emph{Shared freely through the UCI Machine Learning Repository (CC BY 4.0):}
 
 Clore, J., Cios, K., DeShazo, J. P., and Strack, B. 2014. Diabetes 130-US
 hospitals for years 1999-2008. UCI Machine Learning Repository.
 \url{doi:10.24432/C5230J}.
 
-\emph{Downloaded from resources shared by the Fairlearn team:}
+\emph{Downloaded from resources shared by the Fairlearn team (MIT):}
 
 Weerts, H., Dudík M., Edgar, R., Jalali, A., Lutz, R., & Madaio, M. 2023.
 Fairlearn: Assessing and Improving Fairness of AI Systems. Journal of
