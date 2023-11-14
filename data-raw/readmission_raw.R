@@ -29,7 +29,7 @@ readmission <-
     # generally, though, more important to reason thoughtfully about how this
     # data was collected/coded (e.g. note no intersex patients).
     sex = gender,
-    age = factor(age, ordered = TRUE),
+    age = factor(age),
     admission_source = case_when(
       admission_source_id %in% c(1, 2, 3) ~ "Referral",
       admission_source_id == 7 ~ "Emergency",
