@@ -25,18 +25,18 @@ library(readmission)
 
 readmission
 #> # A tibble: 71,515 × 12
-#>    readmitted race           sex   age   admission_source a1c   insurer duration
-#>    <fct>      <fct>          <fct> <fct> <fct>            <fct> <fct>      <dbl>
-#>  1 Yes        African Ameri… Male  [60-… Referral         <NA>  <NA>           7
-#>  2 No         Caucasian      Fema… [50-… Emergency        Norm… Private        4
-#>  3 Yes        Caucasian      Fema… [70-… Referral         <NA>  Medica…        5
-#>  4 No         Caucasian      Fema… [80-… Referral         <NA>  Private        5
-#>  5 No         Caucasian      Fema… [70-… Referral         <NA>  <NA>           4
-#>  6 No         Caucasian      Male  [50-… Emergency        Very… <NA>           2
-#>  7 Yes        African Ameri… Fema… [70-… Referral         <NA>  Private        3
-#>  8 No         Caucasian      Fema… [20-… Emergency        <NA>  <NA>           1
-#>  9 No         Caucasian      Male  [60-… Other            <NA>  <NA>          12
-#> 10 No         Caucasian      Fema… [80-… Referral         <NA>  Medica…        1
+#>    readmitted race   sex   age   admission_source blood_glucose insurer duration
+#>    <fct>      <fct>  <fct> <fct> <fct>            <fct>         <fct>      <dbl>
+#>  1 Yes        Afric… Male  [60-… Referral         <NA>          <NA>           7
+#>  2 No         Cauca… Fema… [50-… Emergency        Normal        Private        4
+#>  3 Yes        Cauca… Fema… [70-… Referral         <NA>          Medica…        5
+#>  4 No         Cauca… Fema… [80-… Referral         <NA>          Private        5
+#>  5 No         Cauca… Fema… [70-… Referral         <NA>          <NA>           4
+#>  6 No         Cauca… Male  [50-… Emergency        Very High     <NA>           2
+#>  7 Yes        Afric… Fema… [70-… Referral         <NA>          Private        3
+#>  8 No         Cauca… Fema… [20-… Emergency        <NA>          <NA>           1
+#>  9 No         Cauca… Male  [60-… Other            <NA>          <NA>          12
+#> 10 No         Cauca… Fema… [80-… Referral         <NA>          Medica…        1
 #> # ℹ 71,505 more rows
 #> # ℹ 4 more variables: n_previous_visits <dbl>, n_diagnoses <dbl>,
 #> #   n_procedures <dbl>, n_medications <dbl>

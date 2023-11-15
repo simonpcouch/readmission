@@ -20,10 +20,10 @@ with levels \code{"[0-10)"}, \code{"[10-20)"}, \code{"[20-30)"}, \code{"[30-40)"
 \item{admission_source}{Whether the patient was referred from a physician,
 admitted via the ER, or arrived via some other source. A factor with
 levels \code{"Emergency"}, \code{"Other"}, and \code{"Referral"}.}
-\item{a1c}{Results from a blood test quantifying the patient's average
-blood sugar over the past 2-3 months. Higher A1C levels are linked to
-diabetes complications. A factor with levels \code{"Normal"}, \code{"High"}, and
-\code{"Very High"}, and many missing values.}
+\item{blood_glucose}{Results from an A1C test, estimating the
+patient's average blood sugar over the past 2-3 months. Higher estimated
+average blood glucose levels are linked to diabetes complications. A factor
+with levels \code{"Normal"}, \code{"High"}, and \code{"Very High"}, and many missing values.}
 \item{insurer}{The health insurance provider (or lack thereof,
 via \code{"Self-Pay"}) for the patient. A factor with levels
 \code{"Medicaid"}, \code{"Medicare"}, \code{"Private"}, and \code{"Self-Pay"}, and many missing

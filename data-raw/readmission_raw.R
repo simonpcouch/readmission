@@ -35,13 +35,16 @@ readmission <-
       admission_source_id == 7 ~ "Emergency",
       .default = "Other"
     ),
-    a1c = case_when(
+    blood_glucose = case_when(
       A1Cresult == "Norm" ~ "Normal",
       A1Cresult == ">7" ~ "High",
       A1Cresult == ">8" ~ "Very High",
       A1Cresult == "Norm" ~ NA_character_
     ),
-    a1c = factor(a1c, levels = c("Normal", "High", "Very High")),
+    blood_glucose = factor(
+      blood_glucose,
+      levels = c("Normal", "High", "Very High")
+    ),
     insurer = case_when(
       payer_code == "MC" ~ "Medicare",
       payer_code == "MD" ~ "Medicaid",

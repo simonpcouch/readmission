@@ -21,10 +21,10 @@
 #'   \item{admission_source}{Whether the patient was referred from a physician,
 #'   admitted via the ER, or arrived via some other source. A factor with
 #'   levels `"Emergency"`, `"Other"`, and `"Referral"`.}
-#'   \item{a1c}{Results from a blood test quantifying the patient's average
-#'   blood sugar over the past 2-3 months. Higher A1C levels are linked to
-#'   diabetes complications. A factor with levels `"Normal"`, `"High"`, and
-#'   `"Very High"`, and many missing values.}
+#'   \item{blood_glucose}{Results from an A1C test, estimating the
+#'   patient's average blood sugar over the past 2-3 months. Higher estimated
+#'   average blood glucose levels are linked to diabetes complications. A factor
+#'   with levels `"Normal"`, `"High"`, and `"Very High"`, and many missing values.}
 #'   \item{insurer}{The health insurance provider (or lack thereof,
 #'   via `"Self-Pay"`) for the patient. A factor with levels
 #'   `"Medicaid"`, `"Medicare"`, `"Private"`, and `"Self-Pay"`, and many missing
