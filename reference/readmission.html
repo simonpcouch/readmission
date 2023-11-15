@@ -20,7 +20,7 @@ payment, and readmission.'><!-- mathjax --><script src="https://cdnjs.cloudflare
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">readmission</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.3</span>
       </span>
     </div>
 
@@ -78,11 +78,11 @@ with levels <code>"[0-10)"</code>, <code>"[10-20)"</code>, <code>"[20-30)"</code
 admitted via the ER, or arrived via some other source. A factor with
 levels <code>"Emergency"</code>, <code>"Other"</code>, and <code>"Referral"</code>.</p></dd>
 
-<dt>a1c</dt>
-<dd><p>Results from a blood test quantifying the patient's average
-blood sugar over the past 2-3 months. Higher A1C levels are linked to
-diabetes complications. A factor with levels <code>"Normal"</code>, <code>"High"</code>, and
-<code>"Very High"</code>, and many missing values.</p></dd>
+<dt>blood_glucose</dt>
+<dd><p>Results from an A1C test, estimating the
+patient's average blood sugar over the past 2-3 months. Higher estimated
+average blood glucose levels are linked to diabetes complications. A factor
+with levels <code>"Normal"</code>, <code>"High"</code>, and <code>"Very High"</code>, and many missing values.</p></dd>
 
 <dt>insurer</dt>
 <dd><p>The health insurance provider (or lack thereof,
@@ -139,7 +139,7 @@ Machine Learning Research, 24(257):1−8.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ sex              : Factor w/ 2 levels "Female","Male": 2 1 1 1 1 2 1 1 2 1 ...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ age              : Factor w/ 10 levels "[0-10)","[10-20)",..: 7 6 8 9 8 6 8 3 7 9 ...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ admission_source : Factor w/ 3 levels "Emergency","Other",..: 3 1 3 3 3 1 3 1 2 3 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ a1c              : Factor w/ 3 levels "Normal","High",..: NA 1 NA NA NA 3 NA NA NA NA ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ blood_glucose    : Factor w/ 3 levels "Normal","High",..: NA 1 NA NA NA 3 NA NA NA NA ...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ insurer          : Factor w/ 4 levels "Medicaid","Medicare",..: NA 3 2 3 NA NA 3 NA NA 2 ...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ duration         : num [1:71515] 7 4 5 5 4 2 3 1 12 1 ...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $ n_previous_visits: num [1:71515] 2 0 2 0 0 0 0 7 0 0 ...</span>
@@ -149,14 +149,14 @@ Machine Learning Research, 24(257):1−8.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">readmission</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 12</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   readmitted race            sex   age   admission_source a1c   insurer duration</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Yes        African Americ… Male  [60-… Referral         <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>             7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> No         Caucasian       Fema… [50-… Emergency        Norm… Private        4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Yes        Caucasian       Fema… [70-… Referral         <span style="color: #BB0000;">NA</span>    Medica…        5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> No         Caucasian       Fema… [80-… Referral         <span style="color: #BB0000;">NA</span>    Private        5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> No         Caucasian       Fema… [70-… Referral         <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>             4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> No         Caucasian       Male  [50-… Emergency        Very… <span style="color: #BB0000;">NA</span>             2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   readmitted race    sex   age   admission_source blood_glucose insurer duration</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Yes        Africa… Male  [60-… Referral         <span style="color: #BB0000;">NA</span>            <span style="color: #BB0000;">NA</span>             7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> No         Caucas… Fema… [50-… Emergency        Normal        Private        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Yes        Caucas… Fema… [70-… Referral         <span style="color: #BB0000;">NA</span>            Medica…        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> No         Caucas… Fema… [80-… Referral         <span style="color: #BB0000;">NA</span>            Private        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> No         Caucas… Fema… [70-… Referral         <span style="color: #BB0000;">NA</span>            <span style="color: #BB0000;">NA</span>             4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> No         Caucas… Male  [50-… Emergency        Very High     <span style="color: #BB0000;">NA</span>             2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 4 more variables: n_previous_visits &lt;dbl&gt;, n_diagnoses &lt;dbl&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   n_procedures &lt;dbl&gt;, n_medications &lt;dbl&gt;</span></span>
 <span class="r-in"><span></span></span>
