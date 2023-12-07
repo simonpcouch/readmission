@@ -3,8 +3,7 @@ Title: Hospital Readmission Data for Patients with Diabetes
 Version: 0.1.0.9000
 Authors@R: 
     person("Simon", "Couch", , "simonpatrickcouch@gmail.com", role = c("aut", "cre"))
-Description: Clinical care data from 130 U.S. hospitals in the years 1999-2008
-    adapted from the study Strack et al. (2014) <doi:10.1155/2014/781670>. 
+Description: Clinical care data from 130 U.S. hospitals in the years 1999-2008. 
     Each row describes an "encounter" with a patient with diabetes, including 
     variables on demographics, medications, patient history, diagnostics, 
     payment, and readmission.
