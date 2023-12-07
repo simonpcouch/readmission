@@ -1,6 +1,6 @@
 Package: readmission
 Title: Hospital Readmission Data for Patients with Diabetes
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: 
     person("Simon", "Couch", , "simonpatrickcouch@gmail.com", role = c("aut", "cre"))
 Description: Clinical care data from 130 U.S. hospitals in the years 1999-2008
