@@ -9,7 +9,13 @@ medications, patient history, diagnostics, payment, and readmission.
 
 ## Installation
 
-You can install the development version of readmission from
+You can install the most recent release of readmission on CRAN with:
+
+``` r
+install.packages("readmission")
+```
+
+Install the development version of readmission from
 [GitHub](https://github.com/) with:
 
 ``` r

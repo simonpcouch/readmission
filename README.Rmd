@@ -19,7 +19,13 @@ readmission is an R data package containing a data frame, `readmission`, giving 
 
 ## Installation
 
-You can install the development version of readmission from [GitHub](https://github.com/) with:
+You can install the most recent release of readmission on CRAN with:
+
+``` r
+install.packages("readmission")
+```
+
+Install the development version of readmission from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
