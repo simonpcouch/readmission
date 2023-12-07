@@ -4,10 +4,16 @@ comments requested:
 * References to sources also be added to the package DESCRIPTION, and
 * A re-wording of a sentence in the package DESCRIPTION.
 
-Both comments have been addressed.
+Both comments have been addressed. Adding the requested reference introduced
+the NOTE:
 
-## R CMD check results
+```
+Possibly misspelled words in DESCRIPTION:
+  Strack (7:28)
+  al (7:38)
+  et (7:35)
+```
 
-0 errors | 0 warnings | 1 note
+The noted words are spelled as intended.
 
-* This is a new release.
+Otherwise, the package checks are free of ERRORs, WARNINGs, and NOTEs.
