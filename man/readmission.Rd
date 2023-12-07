@@ -58,7 +58,7 @@ hospitals for years 1999-2008. UCI Machine Learning Repository.
 
 Weerts, H., Dudík M., Edgar, R., Jalali, A., Lutz, R., & Madaio, M. 2023.
 Fairlearn: Assessing and Improving Fairness of AI Systems. Journal of
-Machine Learning Research, 24(257):1−8.
+Machine Learning Research, 24(257):1-8.
 }
 \usage{
 readmission
